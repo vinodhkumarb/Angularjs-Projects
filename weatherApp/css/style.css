@@ -1,0 +1,25 @@
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.navbar {
+     margin-bottom: 0px; 
+}
+.menu li{
+    padding-right: 5rem;
+    margin-top: 1.4rem;
+}
+hr {
+    margin-top: 10px;
+        margin-bottom: 0px;
+}
+.menu a {
+    font-size: 18px !important;
+}
+.btn_gap {
+    margin-bottom: 2rem;
+}
+.margin0 {
+    margin: 0px;
+}

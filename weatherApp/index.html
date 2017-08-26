@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MyApp | Weather App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css" /> </head>
+
+<body ng-app="weatherApp">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#!home">MyApp</a> </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="pull-right nav nav-pills menu">
+                                <li><a href="#">Weather App</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <section ng-controller="weatherCtrl">
+        <div class="container">
+            <div class="row margin0">
+                <div class="col-md-12">
+                    <h1>City Weather </h1>
+                    <input type="text" placeholder="Enter the city name" ng-model="search" class="form-control" />
+                    <ul ng-if="search" class="list-group">
+                        <li class="list-group-item">
+                            <h4>City Name : {{ details.list[0].name }} </h4></li>
+                        <li class="list-group-item">
+                            <h4>Weather :  {{ details.list[0].weather[0].description }}</h4> </li>
+                        <li class="list-group-item">
+                            <h4>City temp : {{ details.list[0].main.temp }}</h4> </li>
+                        <li class="list-group-item">
+                            <h4>City temp min : {{ details.list[0].main.temp_min }}</h4> </li>
+                        <li class="list-group-item">
+                            <h4>City temp max : {{ details.list[0].main.temp_max }}</h4> </li>
+                        <li class="list-group-item">
+                            <h4>City pressure :  {{ details.list[0].main.pressure }}</h4> </li>
+                        <li class="list-group-item">
+                            <h4>City sea_level :  {{ details.list[0].main.sea_level }}</h4> </li>
+                        <li class="list-group-item">
+                            <h4>City grnd_level :  {{ details.list[0].main.grnd_level }}</h4> </li>
+                        <li class="list-group-item">
+                            <h4>City humidity :  {{ details.list[0].main.humidity }}</h4> </li>
+                        <li class="list-group-item">
+                            <h4>City dt :  {{ details.list[0].dt }}</h4> </li>
+                        <li class="list-group-item">
+                            <h4>City wind speed :  {{ details.list[0].wind.speed }}</h4> </li>
+                        <li class="list-group-item">
+                            <h4>City wind deg :  {{ details.list[0].wind.deg }}</h4> </li>
+                        <li class="list-group-item">
+                            <h4>City lon : {{ details.list[0].coord.lon }} </h4></li>
+                        <li class="list-group-item">
+                            <h4>City lat : {{ details.list[0].coord.lat }} </h4></li>
+                        <li class="list-group-item">
+                            <h4>Country :  {{ details.list[0].sys.country }}</h4> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

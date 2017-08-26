@@ -1,0 +1,50 @@
+<div ng-controller="studentCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-left studet_details">
+                    <h3>Student Details</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Search" ng-model="search" > </div>
+                    </form>
+                    
+                 <h3 ng-show="msg1" class="success-msg alert alert-info">{{ msg1 }}</h3>
+                   
+                     
+                        
+                        
+                </div>
+                <div class="pull-right clearfix">
+                  
+                    <a href="#!add-student">
+                        <button class="btn btn-primary btn_gap">Add Student</button>
+                    </a>
+                </div>
+                <table class="table table-bordered custom_table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Year</th>
+                            <th width="190">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="student in data | filter : search">
+                            <td>{{ student.name }}</td>
+                            <td> {{ student.department }} </td>
+                            <td>{{ student.year }}</td>
+                            <td>
+                                <a href="#!/edit-student/{{ student.$id }}">
+                                    <button type="button" class="btn btn-info">Edit</button>
+                                </a>
+                                <button type="button" ng-click="deleteStudent(student)" class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

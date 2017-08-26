@@ -1,0 +1,39 @@
+.navbar {
+     margin-bottom: 0px; 
+}
+.menu li{
+    padding-right: 5rem;
+    margin-top: 1.4rem;
+}
+hr {
+    margin-top: 10px;
+}
+.menu a {
+    font-size: 18px !important;
+}
+.btn_gap {
+    margin-bottom: 2rem;
+}
+.custom_table td button {
+        margin-right: 1rem;
+}
+.studet_details h3 {
+    float: left;
+        margin-top: 0px;
+}
+.studet_details form {
+    float: left;
+    padding-left: 3rem;
+}
+.studet_details input {
+    width: 300px;
+}
+.custom_table th:nth-child(1) {
+    width: 35%;
+}
+.custom_table th:nth-child(2) {
+    width: 25%;
+}
+.custom_table th:nth-child(3) {
+    width: 20%;
+}

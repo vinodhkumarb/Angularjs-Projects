@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MyApp | Personal Info using json data</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css" /> </head>
+
+<body ng-app="personalInfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#!home">MyApp</a> </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="pull-right nav nav-pills menu">
+                                <li><a href="#">Employee Personal Info</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <section ng-controller="personalCtrl">
+        <div class="container">
+            <div class="row margin0">
+                <div class="col-md-12">
+                    <h3 class="text-center"> ABC international private limited </h3>
+                    <br />
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="Search">Search</label>
+                            <input type="text" class="form-control" placeholder="Search Employee name"> </div>
+                       </form>
+                    <br/>
+                </div>
+            </div>
+            <div class="row margin0">
+                <div class="col-md-6" ng-repeat="p in info">
+                    
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Employee Name : {{ p.name }} </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p> Phone no : {{ p.phone }} </p>
+                                    <p> Email : {{p.email}} </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>Date of Joining : {{p.dateofjoining}} </p>
+                                    <p>Previous Company : {{p.previouscompany}}</p>
+                                    <p>Job Title : {{p.jobtitle}}</p>
+                                    <p>Salary : {{p.salary}}</p>
+                                </div>
+                            </div>
+                            <p><b>Contact Address</b></p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p> Street : {{p.street}} </p>
+                                    <p> Country : {{p.country}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p> City : {{p.city}} </p>
+                                    <p> Postal-code : {{p.postalcode}}</p>
+                                </div>
+                            </div>
+                            <p><b>Personal Information</b></p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>Region : {{p.region}}</p>
+                                    <p>Favourite Food : {{p.favouritefood}}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Marriage Status : {{p.marriagestatus}}</p>
+                                    <p>Favourite Color : {{p.favouritecolor}} </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>Vehicle : {{p.vehicle}}</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+<!--
+        <ul ng-repeat="p in info">
+            <li>{{ p.name }}</li>
+        </ul>
+-->
+        
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

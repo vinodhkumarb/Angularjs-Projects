@@ -1,0 +1,33 @@
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.navbar {
+     margin-bottom: 0px; 
+}
+.menu li{
+    padding-right: 5rem;
+    margin-top: 1.4rem;
+}
+hr {
+    margin-top: 10px;
+        margin-bottom: 0px;
+}
+.menu a {
+    font-size: 18px !important;
+}
+.margin0 {
+    margin: 0px;
+}
+.form-inline {
+    margin-top: 1rem;
+}
+.form-inline input {
+  width: 400px !important;
+    margin-left: 1rem;
+}
+.panel-primary {
+    min-height: 512px;
+    height: 512px;
+}
